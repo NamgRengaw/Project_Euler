@@ -7,8 +7,9 @@ public class MultiplesOfThreeOrFiveTest {
     public static void main(String... args) {
         boolean assertionOne = shouldReturnTwentyThreeAsResultFromAlgorithm();
         if (assertionOne) {
-            System.out.println("Test Validated!");
+            System.out.println(" - Test Validated!");
             System.out.println("- The Answer of the exercise is: " + shouldReturnAnswerOfExercise());
+            System.out.println("- Answer in Stream: " + shouldReturnAnswerOfExerciseWithStream());
             return;
         }
         System.out.println("Test Failed!");
@@ -37,6 +38,16 @@ public class MultiplesOfThreeOrFiveTest {
         final int secondMultiple = 5;
 
         return MultiplesSumCalculator.calculateSumMultiplesWithCeilling(ceillingNumber, firstMultiple, secondMultiple);
+    }
+
+    private static int shouldReturnAnswerOfExerciseWithStream() {
+        final int ceillingNumber = 1000;
+
+        final int firstMultiple = 3;
+        final int secondMultiple = 5;
+
+        return MultiplesSumCalculator.calculateSumMultiplesWithCeillingInStream(ceillingNumber, firstMultiple,
+                secondMultiple);
     }
 
 }
